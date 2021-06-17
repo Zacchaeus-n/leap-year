@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- form -->
+      <form action="#">
+        <h1>Leap Year Calculator</h1>
+        <p>
+          A normal year has 365 days, leap years have 366, with an extra day in
+          February.
+        </p>
+        <div class="input_group">
+          <input
+            class="input"
+            type="year"
+            name="year"
+            id="year"
+            placeholder="Year"
+          />
+        </div>
+        <button id="submit" disabled>Check</button>
+        <!-- display message -->
+        <span class="message"></span>
+      </form>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
