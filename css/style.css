@@ -15,6 +15,10 @@ body {
 
 h1 {
   letter-spacing: 0.3rem;
+  color: #3acf85;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 p {
@@ -38,18 +42,20 @@ p {
 /* form wrapper */
 .wrap form {
   border: 0.1rem solid #dfe1e5;
-  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   background-color: #fff;
-  margin: 2rem auto;
+  margin: 20rem auto;
   padding: 5rem;
-  width: 60%;
+  width: 50%;
+  overflow: hidden;
 }
-
+.wrap form:hover {
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+}
 /* input group */
 .input_group {
   display: flex;
@@ -57,38 +63,36 @@ p {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin: 1rem;
+  margin: 3rem;
   border-radius: 0.3rem;
 }
 
 /* input fields */
-.input_group input {
+input {
   border: 0.1rem solid #dfe1e5;
   border-radius: 1rem;
   outline: none;
-  padding: 1rem 0.5rem;
-  margin: 3rem 0 0.5rem 0;
+  padding: 1rem 1.5rem;
+  margin-right: 0.5rem;
   background-color: #fff;
   color: rgb(22, 23, 24);
-  width: 45%;
+  font-size: 2rem;
 }
 
 /* input fields on hover */
-.input_group input:hover {
+input:hover {
   box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
   border-color: rgba(223, 225, 229, 0);
 }
 
 /* check button */
 #submit {
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
   background-color: #fff;
   border: 0.1rem solid #dfe1e5;
   border-radius: 1rem;
   color: tomato;
-  width: 45%;
-  margin-bottom: 2rem;
   outline: none;
   cursor: pointer;
 }
@@ -104,6 +108,7 @@ p {
 button[disabled] {
   opacity: 0.5;
   cursor: not-allowed !important;
+  color: #555 !important;
 }
 
 /* display message */
@@ -113,16 +118,21 @@ button[disabled] {
   text-align: center;
   padding: 0.5rem;
   border-radius: 0.3rem;
+  font-size: 2rem;
+  transform: translateY(250%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.message.show {
+  border: 0.1rem solid #3acf85;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  color: #3acf85;
+  transform: translateY(0%);
 }
 
 /* showing error, danger or success */
 .danger {
   color: red !important;
-}
-
-.normal {
-  color: rgb(54, 255, 47);
-  font-weight: 900;
 }
 
 .error {
